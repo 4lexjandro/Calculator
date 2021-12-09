@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
+<title>Proj3ct</title>
+</head>
+<body>
+<script>
+function SolveEquation() 
+{
+ var num1 = document.getElementById("Answer").value;
+ var num2 = eval(num1);
+ document.getElementById("Answer").value = num2;
+}
+function output(value) 
+{
+ document.getElementById("Answer").value += value;
+}
+function Erase() 
+{
+ document.getElementById("Answer").value = "";
+}
+</script>
+<div class="calculator">
+<table class="keys" >
+<tr>
+<td colspan = "5">
+<input type="label" id="Answer">
+</td>
+<tr>
+<td>
+    <input class = "button" style ="background-color:darkgrey;" type = "button" value = "+" onclick = "output('+')" />
+</td>
+<td>
+    <input class = "button" style ="background-color:darkgrey;" type = "button" value = "-" onclick = "output('-')" />
+</td>
+<td>
+    <input class = "button" style ="background-color:darkgrey;;" type = "button" value = "*" onclick = "output('*')" />
+</td>
+<td>
+    <input class = "button" style ="background-color:darkgrey;;" type = "button" value = "/" onclick = "output('/')" />
+</td>
+</tr>
+<tr>
+<td>
+    <input class = "button" type = "button" value = "7" onclick = "output('7')" />
+</td>
+<td>
+    <input class = "button" type = "button" value = "8" onclick = "output('8')" />
+</td>
+<td>
+    <input class = "button" type = "button" value = "9" onclick = "output('9')" />
+</td>
+<td rowspan="5" id="equalButton"> <input class = "button" id="input" type = "button" value = "=" onclick = "SolveEquation()" /> </td>
+</tr>
+<tr>
+<td>
+    <input class = "button" type = "button" value = "4" onclick = "output('4')" />
+</td>
+<td>
+    <input class = "button" type = "button" value = "5" onclick = "output('5')" />
+</td>
+<td>
+    <input class = "button" type = "button" value = "6" onclick = "output('6')" />
+</td>
+</tr>  
+
+<tr>
+<td>
+    <input class = "button" type = "button" value = "1" onclick = "output('1')" />
+</td>
+<td>
+    <input class = "button" type = "button" value = "2" onclick = "output('2')" />
+</td>
+<td>
+    <input class = "button" type = "button" value = "3" onclick = "output('3')" />
+</td>
+</tr>
+<tr>
+<td>
+    <input class = "button" type = "button" value = "0" onclick = "output('0')" />
+</td>
+<td>
+    <input class = "button" type = "button" value = "." onclick = "output('.')" />
+</td>
+<td>
+    <input class = "button" type = "button" value = "C" onclick = "Erase()" />
+</td>
+</tr>
+</tr>
+</table>
+</div>
+</body>
+</html>
